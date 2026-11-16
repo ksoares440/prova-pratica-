@@ -1,0 +1,211 @@
+kauann cristian ra: 25086741-2
+questao 1
+
+#include<stdio.h>
+  int main() {
+  	
+  	float x,y, resultado;
+  	int op;
+  	
+  	printf("digite um numero: \n");
+  	scanf("%f", &x);
+  	
+  	printf("digite um numero: \n");
+  	scanf("%f", &y);
+  	
+  	printf("1-soma \n");
+  	printf("2-subtracao \n");
+  	printf("3 - multiplicacao \n");
+  	printf("4 - divisao \n ");
+  	
+  	printf("\n escolha uma opcao: ");
+  	scanf("%d", &op);
+  	
+  	switch(op) {
+  		
+  		case 1:
+  			resultado = x + y;
+  			printf("\n resultado = %.2f", resultado);
+  			break;
+  			
+  			
+  		case 2:
+  			resultado = x - y;
+  			printf("\n resultado = %.2f", resultado);
+  			break;
+  			
+  			
+  		case 3:
+  			resultado = x * y;
+  			printf(" \nresultado = %.2f", resultado);
+  			break;
+  			
+  		case 4:
+  			if(y == 0)
+  			   printf(" \nnao foi possivel dividir por zero.");
+  			else {
+  				resultado=x/y;
+  				printf(" \nresultado=%.2f", resultado);
+  			 
+			  }
+  			break;
+  			default:
+  				printf("\n opcao invalida");
+	  }
+  	
+  	return 0;
+  }
+
+
+-----------------------------------------------------------------------------------------------------------
+Questão 2
+
+a)Serão exibidos:
+1 3 5 7 9
+b)O laço será executado 5 vezes.
+c)Porque o i é incrementado duas vezes:
+uma dentro do for (i++);
+outra dentro do bloco (i++).
+Por isso ele pula os números pares.
+
+Questão 3
+a)12
+b)Primeiro é feita a multiplicação:3 × 2
+c)Porque em C existe prioridade de operadores.
+A multiplicação é realizada antes da soma e da subtração.
+
+Questão 4
+a)Primeiro número:
+10
+b)Último número:
+1
+c)O while executa 10 vezes.
+d)Se trocar i-- por i++, o valor aumenta e a condição i >= 1 nunca deixa de ser verdadeira.
+Resultado:
+Laço infinito.
+
+Questão 5
+a)1 2 3 4
+b)O laço executa 4 vezes.
+c)Diferença:
+while: verifica a condição antes de executar.
+do while: executa primeiro e verifica depois.
+Assim o do while executa pelo menos uma vez.
+
+Questão 6
+#include <stdio.h>
+
+int main() {
+    int idade;
+
+    printf("Digite a idade: ");
+    scanf("%d", &idade);
+
+    if (idade < 0)
+        printf("Idade invalida.");
+    else if (idade < 12)
+        printf("Crianca");
+    else if (idade <= 17)
+        printf("Adolescente");
+    else if (idade <= 59)
+        printf("Adulto");
+    else
+        printf("Idoso");
+
+    return 0;
+}
+
+Questão 7
+a)Saída:
+AB
+b)A letra C não aparece, porque:
+x > 8
+é verdadeiro.Então executa o if e ignora o else.
+c)Existem 2 comandos if.
+
+Questão 8
+#include <stdio.h>
+
+int main() {
+    int numero, i, resultado;
+
+    printf("Digite um numero: ");
+    scanf("%d", &numero);
+
+    for(i=1; i<=10; i++) {
+
+        resultado = numero * i;
+
+        if(resultado == 20)
+            continue;
+
+        if(resultado == 40)
+            break;
+
+        printf("%d x %d = %d\n", numero, i, resultado);
+    }
+
+    return 0;
+}
+
+Questão 9
+a)15
+b)O laço executa 5 vezes.
+c)Na terceira execução:
+1 + 2 + 3 = 6
+Logo:
+soma = 6
+d)Se começasse em 10:
+10 + 1 + 2 + 3 + 4 + 5 = 25
+Resultado:
+25
+
+Questão 10
+#include <stdio.h>
+
+int main() {
+    int i, contador = 0;
+
+    for(i = 1; i <= 50; i++) {
+
+        contador++;
+
+        if(i == 30)
+            break;
+
+        if(i % 5 == 0)
+            printf("%d - MULTIPLO DE 5\n", i);
+
+        else if(i % 2 == 0)
+            printf("%d - PAR\n", i);
+
+        else
+            printf("%d - IMPAR\n", i);
+    }
+
+    printf("\nForam verificados %d numeros.", contador);
+
+    return 0;
+}
+
+Questão Bônus
+a)Saída:
+1 2 4 5
+b)O número 3 não será exibido.
+Quando i chega em 3:
+if(i == 3)
+    i++;
+ele passa para 4 antes do printf.
+
+c)O laço executa 4 vezes.
+As iterações acontecem com:
+1
+2
+3
+5
+Na terceira, imprime 4. Depois o for incrementa novamente para 5.
+
+d)Porque existem dois incrementos nessa execução:
+um dentro do if (i++);
+outro no próprio for (i++).
+Assim o valor passa de 3 → 4 → 5, pulando um número.
